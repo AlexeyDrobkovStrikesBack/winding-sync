@@ -19,3 +19,6 @@ output/*
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Throwaway environment built by verify_submission.py
+.verify_venv/

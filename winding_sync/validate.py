@@ -1,6 +1,6 @@
 """
 Validation for automatic winding assignment.
-Run with: python -m scrolltriage.validate_winding
+Run with: python -m winding_sync.validate
 
 The claim under test is that replacing BFS spanning-tree propagation with L1
 integer synchronization removes the human from winding reconciliation -- the
