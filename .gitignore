@@ -1,0 +1,21 @@
+# Virtual environment - never commit this, it is large and machine-specific
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Generated outputs - these are produced by running the tools, not source
+output/*
+!output/README.txt
+
+# Large diagnostic dumps
+*.npz
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini

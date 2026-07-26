@@ -1,0 +1,16 @@
+# Works on Python 3.10 through 3.14.
+#
+# All of these have Windows builds for Python 3.14 (verified against PyPI):
+#   numpy 2.5.1, scipy 1.18.0, Pillow 12.3.0, aiohttp  -> cp314 win_amd64 wheels
+#   zarr, s3fs, fsspec, botocore                       -> pure Python
+#
+# zarr 3.x needs Python >= 3.12. On older Python pip installs zarr 2.x
+# instead, which is fine: the scroll volumes are Zarr v2 format and this
+# package supports both library versions.
+numpy>=1.24
+scipy>=1.10
+Pillow>=9.0
+matplotlib>=3.5
+zarr>=2.16
+s3fs>=2023.6
+fsspec>=2023.6
