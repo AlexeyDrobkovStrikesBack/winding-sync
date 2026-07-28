@@ -27,18 +27,23 @@ HONEST SCOPE -- read before trusting the number as an absolute count.
 scroll validation against Grand-Prize segment meshes (4 scrolls: PHerc 0139,
 0172, Paris 4, 1667) shows this recovered pitch systematically OVER-estimates
 the true pitch, i.e. the recovered field UNDER-resolves the true winding
-density, by a resolution-dependent factor that is NOT a universal constant:
+density, by a factor that varies scroll to scroll (a noisy under-count, not a
+clean law):
 
-    recovered_density / GT_density = 0.52 - 0.82,
-    rising monotonically with voxels-per-turn
-    (0172 ~0.53 @ 20 vox/turn -> 1667 ~0.82 @ 54 vox/turn).
+    recovered_density / GT_density = 0.42 - 0.67
+    (expanded validation: 47 GP segments across the 4 scrolls).
+
+An earlier 4-point read suggested this factor rose monotonically with
+voxels-per-turn (0.52 -> 0.82); that did NOT survive the expanded run. The 1667
+"0.82" was an artifact of an off-centre umbilicus plus wrap-segment overlap:
+re-measured on the merged 25-turn surface, 1667's pitch is ~236 um (on the 225 um
+corpus median) with density ~0.43-0.67, sitting with the other scrolls. The
+dominant systematic is umbilicus centring, not resolution.
 
 So this is the eccentricity-robust *measurement primitive*, not a calibrated
-absolute count. In particular a single fixed spacing anchor (e.g. the 225 um
-corpus median) will mis-scale tightly-wound or coarsely-sampled scrolls by up
-to ~1.9x. The correct absolute calibration must let the density factor scale
-with voxels-per-turn, or use per-location ground truth. This module deliberately
-does not bake in a constant anchor.
+absolute count: the recovered field under-counts winding density by ~1.5-2.4x,
+so a single fixed spacing anchor (e.g. the 225 um corpus median) cannot calibrate
+absolute counts. This module deliberately does not bake in a constant anchor.
 
 Depends only on numpy.
 """
