@@ -18,5 +18,6 @@ for _stream in (_sys.stdout, _sys.stderr):
 """Scroll triage: rank Herculaneum scroll volumes by tractability, from coarse
 pyramid levels, without loading full volumes."""
 from .volume import VolumeSource, estimate_umbilicus
+from .pitch import angle_binned_pitch, refine_umbilicus_pitch
 
 __version__ = "0.1.0"
