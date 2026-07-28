@@ -18,7 +18,7 @@ Two things confound a global fit:
 
 Within a *narrow angular wedge* both effects are frozen out: a wedge sees a
 small, monotone radius interval per winding, so winding is locally linear in
-radius. We fit each wedge with a robust (Theil-Sen) line and take the median
+radius. I fit each wedge with a robust (Theil-Sen) line and take the median
 per-wedge slope. This reproduces the mesh radial pitch on Paris 4 where the
 global fit does not.
 
